@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* DESIGN.md tokens — the entire color vocabulary */
+  --mudwall: #3F2D20;
+  --mud: #5A4332;
+  --bone: #F6F0E3;
+  --bonedeep: #EAE0CC;
+  --ink: #3A2B1E;
+  --ink-soft: #7A6650;
+  --brass: #A9852F;
+  --brasslight: #D9B45C;
+  --sage: #7E9670;
+  --clayred: #A8472F;
+}
+
+html, body, #root {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  @apply bg-mudwall font-sans text-ink antialiased;
+  font-size: 13px;
+}
+
+/* the mud wall: umber with a barely-there plaster grain */
+.mud-wall {
+  background-color: var(--mudwall);
+  background-image:
+    radial-gradient(ellipse 120% 90% at 50% 8%, rgba(255, 236, 200, 0.07), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 105%, rgba(0, 0, 0, 0.28), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.85 0 0 0 0 0.7 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.label-caps {
+  @apply font-sans text-[11px] font-bold uppercase tracking-label text-inksoft;
+}
+
+button, input, select { font: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+input[type='range'] {
+  @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-bonedeep;
+  accent-color: var(--brass);
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  background: var(--brass);
+  border: 2px solid var(--bone);
+  box-shadow: 0 1px 3px rgba(42, 28, 16, 0.4);
+}
+input[type='color'] {
+  @apply h-9 w-9 cursor-pointer rounded-full border-0 bg-transparent p-0;
+}
+input[type='color']::-webkit-color-swatch-wrapper { padding: 2px; }
+input[type='color']::-webkit-color-swatch { border-radius: 9999px; border: 2px solid var(--bonedeep); }
+
+/* round mirror-glint loading indicator (signature element) */
+.glint-spinner {
+  position: relative;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #fdfdfb 0%, #d7dcdf 45%, #a9b2b8 80%, #7e878d 100%);
+  box-shadow: inset 0 0 0 2px rgba(40, 46, 50, 0.6), 0 2px 8px rgba(20, 10, 4, 0.5);
+  overflow: hidden;
+}
+.glint-spinner::after {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(transparent 0deg, transparent 40deg, rgba(255, 255, 255, 0.95) 60deg, transparent 80deg, transparent 360deg);
+  animation: glint-rotate 1.1s linear infinite;
+}
+@keyframes glint-rotate { to { transform: rotate(360deg); } }
+
+/* fill ripple — once, outward from the tap point */
+.fill-ripple {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 9999px;
+  border: 2px solid var(--brasslight);
+  pointer-events: none;
+  animation: ripple-out 480ms ease-out forwards;
+}
+@keyframes ripple-out {
+  from { transform: scale(0.4); opacity: 0.95; }
+  to { transform: scale(5); opacity: 0; }
+}
+
+/* mirror glints once when placed */
+.mirror-enter { animation: mirror-pop 420ms ease-out; }
+@keyframes mirror-pop {
+  0% { opacity: 0; }
+  35% { opacity: 1; filter: brightness(2.1); }
+  100% { filter: brightness(1); }
+}
+
+/* F8 light sweep — slow specular glint travelling across mirrors */
+.sweep-on .mirror-spec {
+  animation: spec-sweep 5.5s ease-in-out infinite;
+  animation-delay: var(--sweep-delay, 0s);
+}
+@keyframes spec-sweep {
+  0%, 100% { opacity: 0.8; }
+  8% { opacity: 1; filter: brightness(1.6) drop-shadow(0 0 6px rgba(255,255,255,0.9)); }
+  16%, 92% { opacity: 0.8; filter: none; }
+}
+
+/* boundary-detection shimmer over the artwork */
+.shimmer-overlay {
+  background: linear-gradient(105deg, transparent 38%, rgba(246, 240, 227, 0.22) 50%, transparent 62%);
+  background-size: 280% 100%;
+  animation: shimmer-move 1.4s linear infinite;
+}
+@keyframes shimmer-move {
+  from { background-position: 120% 0; }
+  to { background-position: -160% 0; }
+}
+
+.swatch-round {
+  @apply rounded-full shadow-swatch transition-transform duration-200 ease-out;
+}
+.swatch-round:hover { transform: translateY(-2px) scale(1.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .sweep-on .mirror-spec { animation: none !important; }
+  .fill-ripple { display: none; }
+}
+
+/* print: only the material sheet, one tidy page */
+@media print {
+  body { background: #fff !important; }
+  body * { visibility: hidden; }
+  .print-sheet, .print-sheet * { visibility: visible; }
+  .print-sheet {
+    position: fixed !important;
+    inset: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 24px !important;
+  }
+  .no-print { display: none !important; }
+}

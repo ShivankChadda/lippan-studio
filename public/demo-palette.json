@@ -1,0 +1,32 @@
+[
+  {
+    "id": "demo-mint",
+    "name": "Mint",
+    "hex": "#BFD8D2"
+  },
+  {
+    "id": "demo-pink",
+    "name": "Pastel pink",
+    "hex": "#F4B8C1"
+  },
+  {
+    "id": "demo-pistachio",
+    "name": "Pistachio",
+    "hex": "#DCE6A0"
+  },
+  {
+    "id": "demo-green",
+    "name": "Bottle green",
+    "hex": "#2E6B3E"
+  },
+  {
+    "id": "demo-yellow",
+    "name": "Golden yellow",
+    "hex": "#F2C744"
+  },
+  {
+    "id": "demo-lilac",
+    "name": "Lilac",
+    "hex": "#C9C3E3"
+  }
+]
