@@ -1,0 +1,242 @@
+{
+ "intro_1": {
+  "sha": "3bd2d5d9eb0f",
+  "duration": 5.74
+ },
+ "intro_2": {
+  "sha": "965f210f31d8",
+  "duration": 2.86
+ },
+ "intro_3": {
+  "sha": "5e693ab2cec4",
+  "duration": 6.54
+ },
+ "given_1": {
+  "sha": "252035685d33",
+  "duration": 4.86
+ },
+ "given_2": {
+  "sha": "b4bd08151557",
+  "duration": 4.46
+ },
+ "given_3": {
+  "sha": "81a93d51e9b9",
+  "duration": 9.88
+ },
+ "given_4": {
+  "sha": "0aa6637f18e2",
+  "duration": 8.28
+ },
+ "given_5": {
+  "sha": "e3d5f44ad0c6",
+  "duration": 6.2
+ },
+ "motion_1": {
+  "sha": "97ac46194261",
+  "duration": 2.16
+ },
+ "motion_2": {
+  "sha": "cc037eb26094",
+  "duration": 7.64
+ },
+ "motion_3": {
+  "sha": "5d064777ab3a",
+  "duration": 7.08
+ },
+ "acc_1": {
+  "sha": "a4a624de5f07",
+  "duration": 2.2
+ },
+ "acc_2": {
+  "sha": "8dbb6d440075",
+  "duration": 12.06
+ },
+ "acc_3": {
+  "sha": "a51f5ddefdc5",
+  "duration": 6.32
+ },
+ "acc_4": {
+  "sha": "e015a10c4ee9",
+  "duration": 3.36
+ },
+ "acc_5": {
+  "sha": "0d4878f2c0ed",
+  "duration": 7.62
+ },
+ "acc_6": {
+  "sha": "bef08607299d",
+  "duration": 4.42
+ },
+ "cmp_1": {
+  "sha": "a1b387058756",
+  "duration": 5.86
+ },
+ "cmp_2": {
+  "sha": "7929376ec114",
+  "duration": 7.64
+ },
+ "cmp_3": {
+  "sha": "da594ec460d5",
+  "duration": 9.8
+ },
+ "cmp_4": {
+  "sha": "7fac422a912d",
+  "duration": 6.4
+ },
+ "cmp_5": {
+  "sha": "44f87b946841",
+  "duration": 11.32
+ },
+ "ten_1": {
+  "sha": "633c96870604",
+  "duration": 5.32
+ },
+ "ten_2": {
+  "sha": "410953a26d17",
+  "duration": 5.68
+ },
+ "ten_3": {
+  "sha": "c9c3d45aeee9",
+  "duration": 9.22
+ },
+ "fbd_1": {
+  "sha": "12668aec66bb",
+  "duration": 6.22
+ },
+ "fbd_2": {
+  "sha": "a26579710c67",
+  "duration": 7.48
+ },
+ "fbd_3": {
+  "sha": "d6a26bfb7930",
+  "duration": 3.44
+ },
+ "fbd_4": {
+  "sha": "3074a7a54619",
+  "duration": 9.06
+ },
+ "fbd_5": {
+  "sha": "85e89c4bd916",
+  "duration": 3.36
+ },
+ "rot_1": {
+  "sha": "9939a9a98432",
+  "duration": 8.42
+ },
+ "rot_2": {
+  "sha": "b4e89b765bbd",
+  "duration": 7.26
+ },
+ "rot_3": {
+  "sha": "ebae301bc084",
+  "duration": 9.3
+ },
+ "rot_4": {
+  "sha": "9fc1f38d01fa",
+  "duration": 4.8
+ },
+ "comb_1": {
+  "sha": "ed41b29d7ff8",
+  "duration": 5.16
+ },
+ "comb_2": {
+  "sha": "7442ec49b549",
+  "duration": 8.54
+ },
+ "comb_3": {
+  "sha": "400f5cf69e31",
+  "duration": 5.96
+ },
+ "comb_4": {
+  "sha": "c86ed03083c6",
+  "duration": 8.32
+ },
+ "comb_5": {
+  "sha": "0361559add27",
+  "duration": 8.4
+ },
+ "comb_6": {
+  "sha": "3a2dbd261536",
+  "duration": 11.32
+ },
+ "solve_1": {
+  "sha": "a2fa641f795e",
+  "duration": 8.44
+ },
+ "solve_2": {
+  "sha": "96a616a1a4c9",
+  "duration": 11.46
+ },
+ "solve_3": {
+  "sha": "85332e2e34af",
+  "duration": 8.76
+ },
+ "solve_4": {
+  "sha": "0e8cc25482bb",
+  "duration": 10.54
+ },
+ "solve_5": {
+  "sha": "425bba9c94fc",
+  "duration": 6.04
+ },
+ "solve_6": {
+  "sha": "ac366e55b0bd",
+  "duration": 5.24
+ },
+ "chk_1": {
+  "sha": "bef7d9c84566",
+  "duration": 4.74
+ },
+ "chk_2": {
+  "sha": "8a5a67393a18",
+  "duration": 8.96
+ },
+ "chk_3": {
+  "sha": "db555a83c5a6",
+  "duration": 9.58
+ },
+ "chk_4": {
+  "sha": "8cd6bd1dd161",
+  "duration": 10.04
+ },
+ "chk_5": {
+  "sha": "8b2c9f0c424c",
+  "duration": 7.74
+ },
+ "chk_6": {
+  "sha": "b0ce02a14009",
+  "duration": 5.4
+ },
+ "opt_1": {
+  "sha": "3e05c4a62298",
+  "duration": 8.82
+ },
+ "opt_2": {
+  "sha": "222c137431cc",
+  "duration": 5.88
+ },
+ "opt_3": {
+  "sha": "ec1117a391b4",
+  "duration": 8.9
+ },
+ "opt_4": {
+  "sha": "d26b7d60c1f9",
+  "duration": 8.04
+ },
+ "sum_1": {
+  "sha": "d02b785be5c1",
+  "duration": 2.94
+ },
+ "sum_2": {
+  "sha": "70dc6335e992",
+  "duration": 2.52
+ },
+ "sum_3": {
+  "sha": "82ab80c1f939",
+  "duration": 5.46
+ },
+ "sum_4": {
+  "sha": "a137e91943d5",
+  "duration": 7.16
+ }
+}
